@@ -1,0 +1,4 @@
+70mm x 70mm
+distance between screw holes: 52.5mm
+
+edge distance to screw centre: 8.25mm
