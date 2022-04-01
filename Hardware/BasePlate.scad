@@ -42,11 +42,28 @@ module robot_power_board(x, y, size=M3, rotation=0) {
     }
 }
 
+module raspberry_pi_zero(x, y, size=M3, rotation=0) {
+    union () {
+        screw_hole(size, x, y);
+        screw_hole(size, x+58, y);
+        screw_hole(size, x, y+23);
+        screw_hole(size, x+58, y+23);
+    }
+}
+
+module ultrasonic_mount(x, y, size=M3, rotation=0) {
+    union() {
+        screw_hole(size, x, y);
+        screw_hole(size, x+13, y);
+    }
+}
+
 difference() {
     cube([70, 70, PlateHeight]);
     screw_hole(M3, 8.25, 8.25);
     screw_hole(M3, 61.75, 8.25);
     screw_hole(M3, 8.25, 61.75);
     screw_hole(M3, 61.75, 61.75);
-    robot_power_board(20, 25);
+    raspberry_pi_zero(6, 23.5);
+    ultrasonic_mount(28.5, 65);
 }
