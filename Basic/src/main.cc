@@ -24,7 +24,10 @@ setup()
 	while (!Serial) ;
 
 	Serial.println("started");
+	legs[LEG1].enable();
+	legs[LEG2].enable();
 	legs[LEG3].enable();
+	legs[LEG4].enable();
 
 	delay(1000);
 }
