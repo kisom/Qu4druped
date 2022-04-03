@@ -5,6 +5,7 @@
 M2 = 1;
 M25 = 1.25;
 M3 = 1.75;
+M4 = 2.1;
 PlateHeight = 2.5;
 
 
@@ -64,6 +65,7 @@ difference() {
     screw_hole(M3, 61.75, 8.25);
     screw_hole(M3, 8.25, 61.75);
     screw_hole(M3, 61.75, 61.75);
-    raspberry_pi_zero(6, 23.5);
+    arduino_uno(13, 57);
+    // raspberry_pi_zero(6, 23.5);
     ultrasonic_mount(28.5, 65);
 }
